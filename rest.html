@@ -1,0 +1,20 @@
+<html>
+<head><title>Mi primera llamada REST</title></head>
+<body>
+    <script>
+        fetch("https://swapi.dev/api/people/1").then((respnse) => response.json()).then((data) =>{
+
+            var  h1 = document.createElement("h1")
+
+            h1.innerHTML = data.name;
+
+            document.body.appendChild(h1);
+
+            var  h2 = document.createElement("h2");
+            h2.innerHTML = data.gender;
+            document.body.appendChild(h2);        
+        });
+
+    </script>
+</body>
+</html>
